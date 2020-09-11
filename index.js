@@ -195,7 +195,7 @@ const contacts = [
     address: {
       street: "Dayna Park",
       suite: "Suite 449",
-      city: "South vale",
+      city: "South Vale",
       zipcode: "76495-3109",
       geo: {
         lat: "24.6463",
@@ -307,14 +307,34 @@ function filterByCity(city) {
   If the value is not "0" call `filterByCity()` passing the value selected by
   the user. Then call `render()` with the filtered list.
 */
-function filterHandler() {}
+function filterHandler() {
+  const select = document.querySelector("#filterOptions");
+
+  select.addEventListener("change", (event) => {
+    const selected = event.target.value;
+    if (selected === "0") {
+      render(contacts);
+    } else {
+      render(filterByCity(selected));
+    }
+  });
+}
 
 /*
+  Accepts an array of contacts.
   Populate the select with id `filterOptions` with the list of cities.
   Create a list of cities from the contacts array with no duplicates then
   add an `<option>` element for each city to the select.
 */
-function loadCities() {}
+function loadCities(contacts) {
+  console.log(contacts);
+  const cities = Array.from(
+    new Set(contacts.map((contact) => contact.address.city)).values()
+  ).map((city) => `<option value="${city}">${city}</option>`);
+  const select = document.querySelector("#filterOptions");
+  cities.unshift('<option value="0">-- Select a city --</option>');
+  select.innerHTML = cities.join("");
+}
 
 /*
   Remove the contact from the contact list with the given id.
@@ -333,6 +353,9 @@ function deleteButtonHandler() {}
   Perform all startup tasks here. Use this function to attach the 
   required event listeners, call loadCities() then call render().
 */
-function main() {}
+function main() {
+  loadCities(contacts);
+  filterHandler();
+}
 
 window.addEventListener("DOMContentLoaded", main);
