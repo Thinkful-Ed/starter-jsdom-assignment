@@ -296,7 +296,9 @@ function render(contacts) {
   Return a new array containing the filtered list. 
   Do NOT modify the original array.
 */
-function filterByCity(city) {}
+function filterByCity(city) {
+  return contacts.filter((contact) => contact.address.city === city);
+}
 
 /*
   Add an `change` event listener to the `filterOptions` select element.
