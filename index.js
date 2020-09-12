@@ -7,7 +7,7 @@ const contacts = [
     name: "Leanne Graham",
     username: "Bret",
     email: "Sincere@april.biz",
-    picture: "https://via.placeholder.com/150/008600/FFFFFF?Text=LG",
+    picture: "https://via.placeholder.com/150/008600/FFFFFF?text=LG",
     address: {
       street: "Kulas Light",
       suite: "Apt. 556",
@@ -30,7 +30,7 @@ const contacts = [
     id: 2,
     name: "Ervin Howell",
     email: "Shanna@melissa.tv",
-    picture: "https://via.placeholder.com/150/0000FF/FFFFFF?Text=EH",
+    picture: "https://via.placeholder.com/150/0000FF/FFFFFF?text=EH",
     address: {
       street: "Victor Plains",
       suite: "Suite 879",
@@ -53,7 +53,7 @@ const contacts = [
     id: 3,
     name: "Clementine Bauch",
     email: "Nathan@yesenia.net",
-    picture: "https://via.placeholder.com/150/34F500/FFFFFF?Text=CB",
+    picture: "https://via.placeholder.com/150/34F500/FFFFFF?text=CB",
     address: {
       street: "Douglas Extension",
       suite: "Suite 847",
@@ -76,7 +76,7 @@ const contacts = [
     id: 4,
     name: "Patricia Lebsack",
     email: "Julianne.OConner@kory.org",
-    picture: "https://via.placeholder.com/150/008600/FFFFFF?Text=PL",
+    picture: "https://via.placeholder.com/150/008600/FFFFFF?text=PL",
     address: {
       street: "Hoeger Mall",
       suite: "Apt. 692",
@@ -99,7 +99,7 @@ const contacts = [
     id: 5,
     name: "Chelsey Dietrich",
     email: "Lucio_Hettinger@annie.ca",
-    picture: "https://via.placeholder.com/150/FF00FF/FFFFFF?Text=CD",
+    picture: "https://via.placeholder.com/150/FF00FF/FFFFFF?text=CD",
     address: {
       street: "Skiles Walks",
       suite: "Suite 351",
@@ -122,7 +122,7 @@ const contacts = [
     id: 6,
     name: "Mrs. Dennis Schulist",
     email: "Karley_Dach@jasper.info",
-    picture: "https://via.placeholder.com/150/000086/FFFFFF?Text=DS",
+    picture: "https://via.placeholder.com/150/000086/FFFFFF?text=DS",
     address: {
       street: "Norberto Crossing",
       suite: "Apt. 950",
@@ -145,7 +145,7 @@ const contacts = [
     id: 7,
     name: "Kurtis Weissnat",
     email: "Telly.Hoeger@billy.biz",
-    picture: "https://via.placeholder.com/150/860000/FFFFFF?Text=KW",
+    picture: "https://via.placeholder.com/150/860000/FFFFFF?text=KW",
     address: {
       street: "Rex Trail",
       suite: "Suite 280",
@@ -168,7 +168,7 @@ const contacts = [
     id: 8,
     name: "Nicholas Runolfsdottir V",
     email: "Sherwood@rosamond.me",
-    picture: "https://via.placeholder.com/150/FF0000/FFFFFF?Text=NR",
+    picture: "https://via.placeholder.com/150/FF0000/FFFFFF?text=NR",
     address: {
       street: "Ellsworth Summit",
       suite: "Suite 729",
@@ -191,7 +191,7 @@ const contacts = [
     id: 9,
     name: "Glenna Reichert",
     email: "Chaim_McDermott@dana.io",
-    picture: "https://via.placeholder.com/150/226688/FFFFFF?Text=GR",
+    picture: "https://via.placeholder.com/150/226688/FFFFFF?text=GR",
     address: {
       street: "Dayna Park",
       suite: "Suite 449",
@@ -214,7 +214,7 @@ const contacts = [
     id: 10,
     name: "Clementina DuBuque",
     email: "Rey.Padberg@karina.biz",
-    picture: "https://via.placeholder.com/150/000000/FFFFFF?Text=CD",
+    picture: "https://via.placeholder.com/150/000000/FFFFFF?text=CD",
     address: {
       street: "Kattie Turnpike",
       suite: "Suite 198",
@@ -264,11 +264,12 @@ function filterByCity(city) {}
 function filterHandler() {}
 
 /*
+  Accepts an array of contacts.
   Populate the select with id `filterOptions` with the list of cities.
   Create a list of cities from the contacts array with no duplicates then
   add an `<option>` element for each city to the select.
 */
-function loadCities() {}
+function loadCities(contacts) {}
 
 /*
   Remove the contact from the contact list with the given id.
