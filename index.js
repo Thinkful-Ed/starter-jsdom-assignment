@@ -327,7 +327,6 @@ function filterHandler() {
   add an `<option>` element for each city to the select.
 */
 function loadCities(contacts) {
-  console.log(contacts);
   const cities = Array.from(
     new Set(contacts.map((contact) => contact.address.city)).values()
   ).map((city) => `<option value="${city}">${city}</option>`);
@@ -339,7 +338,10 @@ function loadCities(contacts) {
 /*
   Remove the contact from the contact list with the given id.
 */
-function deleteContact(id) {}
+function deleteContact(id) {
+  const index = contacts.findIndex((contact) => contact.id === +id);
+  index >= 0 && contacts.splice(index, 1);
+}
 
 /*
   Add a `click` event handler to the `deleteBtn` elements.
@@ -347,7 +349,15 @@ function deleteContact(id) {}
   corresponding `data-id` then call `deleteContact()` and re-render 
   the list.
 */
-function deleteButtonHandler() {}
+function deleteButtonHandler() {
+  const contactsElement = document.querySelector("#contacts");
+  contactsElement.addEventListener("click", (event) => {
+    const card = event.target.parentNode;
+    deleteContact(card.dataset.id);
+    loadCities(contacts);
+    render(contacts);
+  });
+}
 
 /*
   Perform all startup tasks here. Use this function to attach the 
@@ -356,6 +366,7 @@ function deleteButtonHandler() {}
 function main() {
   loadCities(contacts);
   filterHandler();
+  deleteButtonHandler();
 }
 
 window.addEventListener("DOMContentLoaded", main);
