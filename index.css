@@ -71,12 +71,18 @@ header {
   top: 2px;
   right: 2px;
   border: solid 1px #2d6120;
-  border-radius: 2px;
+  border-radius: 50%;
   cursor: pointer;
+  width: 25px;
+  height: 25px;
 }
 
 .card .deleteBtn:hover {
   background: #ffffff;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 1.5s ease-in-out;
+  transition: all 1.5s ease-in-out;
 }
 
 .card .avatar {

@@ -108,6 +108,7 @@ Create and return the HTML to render a single contact. The HTML for a single con
 
 #### `loadCities()`
 
+Accepts an array of contacts.
 The load cities function finds all unique cities in the contact list and inserts a set of options in the select element with the id `filterOptions`.
 
 After populating the `filterOptions` select it should look like this:
@@ -150,7 +151,7 @@ the list.
 
 #### `main()`
 
-This is teh starting point of the code. Call the necessary functions to add event listeners then render the contacts.
+This is the starting point of the code. Call the necessary functions to add event listeners then render the contacts.
 
 ## License
 
